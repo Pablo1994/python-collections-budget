@@ -29,3 +29,4 @@ def main():
 
     for expense in expenses.list:
         myBudgetList.append(expense.amount)
+    print(f'The count of all expenses: {len(myBudgetList)}')
