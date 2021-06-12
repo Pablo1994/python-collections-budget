@@ -1,6 +1,11 @@
 from . import Expense
 
 
+
+expenses = Expense.Expenses()
+expenses.read_expenses('data/spending_data.csv')
+
+
 class BudgetList:
     
     def __init__(self, budget):
@@ -23,8 +28,6 @@ class BudgetList:
 
     def main():
         myBudgetList = BudgetList(1200)
-        expenses = Expense.Expenses()
-        expenses.read_expenses('data/spending_data.csv')
 
         for expense in expenses.list:
             myBudgetList.append(expense.amount)
